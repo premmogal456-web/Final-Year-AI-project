@@ -1,0 +1,4 @@
+GET /index.html HTTP/1.1
+GET /login.php?id=1' OR '1'='1 HTTP/1.1
+POST /admin HTTP/1.1 401
+GET /search?q=<script>alert(1)</script>

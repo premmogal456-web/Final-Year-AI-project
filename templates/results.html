@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Threat Detection Results</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f2027;
+            color: white;
+        }
+
+        .navbar {
+            background: #111;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar h2 {
+            color: #00ffff;
+            margin: 0;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00ffff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        th {
+            background: #00ffff;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>🛡 Threat Detection Results</h2>
+    <a href="/logout" style="color:#00ffff;">Logout</a>
+</div>
+
+<div class="content">
+
+    <div class="card">
+        <h3>📊 Summary</h3>
+        <p><strong>Total Logs:</strong> {{ total_logs }}</p>
+        <p><strong>Most Dangerous IP:</strong> {{ most_dangerous_ip }}</p>
+        <p><strong>Threat Score:</strong> {{ threat_score }}%</p>
+    </div>
+
+    <div class="card">
+        <h3>📈 Attack Distribution</h3>
+        {% for key, value in stats.items() %}
+            <p>{{ key }} : {{ value }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="card">
+        <h3>📝 Detailed Results</h3>
+
+        <table>
+            <tr>
+                <th>IP Address</th>
+                <th>Log</th>
+                <th>Threat</th>
+                <th>Severity</th>
+                <th>Prevention</th>
+            </tr>
+
+            {% for row in results %}
+            <tr>
+                <td>{{ row.ip }}</td>
+                <td>{{ row.log }}</td>
+                <td>{{ row.threat }}</td>
+                <td>{{ row.severity }}</td>
+                <td>{{ row.prevention }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

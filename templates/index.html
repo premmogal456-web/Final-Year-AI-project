@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Logs - AI Threat Detector</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f2027;
+            color: white;
+        }
+
+        .navbar {
+            background: #111;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            color: #00ffff;
+            margin: 0;
+        }
+
+        .navbar a {
+            color: #00ffff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #111;
+            min-height: 100vh;
+            padding-top: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #00ffff;
+            padding: 15px 25px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: #1f1f1f;
+        }
+
+        .content {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upload-card {
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            width: 450px;
+            box-shadow: 0 0 25px rgba(0,255,255,0.3);
+        }
+
+        .drop-zone {
+            border: 2px dashed #00ffff;
+            padding: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .drop-zone.dragover {
+            background: rgba(0,255,255,0.1);
+            border-color: #00ffff;
+        }
+
+        .file-name {
+            margin-top: 15px;
+            color: #00ffff;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background: #00ffff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00cccc;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>🛡 AI Threat Detector</h2>
+    <div>
+        <span>👤 {{ session['user'] }}</span>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="sidebar">
+        <a href="/">🏠 Dashboard</a>
+        <a href="/reports">📊 Reports</a>
+        <a href="/export">⬇ Download CSV</a>
+        <a href="/settings">⚙ Settings</a>
+    </div>
+
+    <div class="content">
+
+        <div class="upload-card">
+            <h3>📂 Upload Log File</h3>
+
+            <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+                <div class="drop-zone" id="dropZone">
+                    Drag & Drop Log File Here<br>
+                    <small>or click to select</small>
+                </div>
+
+                <input type="file" name="logfile" id="fileInput" required>
+
+                <div class="file-name" id="fileName"></div>
+
+                <button type="submit">🚀 Analyze Logs</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const dropZone = document.getElementById("dropZone");
+    const fileInput = document.getElementById("fileInput");
+    const fileName = document.getElementById("fileName");
+
+    dropZone.addEventListener("click", () => fileInput.click());
+
+    fileInput.addEventListener("change", function() {
+        if (this.files.length > 0) {
+            fileName.textContent = "Selected: " + this.files[0].name;
+        }
+    });
+
+    dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("dragover");
+    });
+
+    dropZone.addEventListener("dragleave", () => {
+        dropZone.classList.remove("dragover");
+    });
+
+    dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("dragover");
+
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            fileInput.files = files;
+            fileName.textContent = "Selected: " + files[0].name;
+        }
+    });
+</script>
+
+</body>
+</html>

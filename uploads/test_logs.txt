@@ -1,0 +1,8 @@
+192.168.1.10 - GET /login ' OR 1=1
+192.168.1.11 - <script>alert('XSS')</script>
+192.168.1.12 - failed login attempt
+192.168.1.13 - too many requests flood detected
+192.168.1.14 - GET /?cmd=whoami
+192.168.1.15 - GET ../../etc/passwd
+192.168.1.16 - upload virus.exe
+192.168.1.17 - unauthorized access to /admin

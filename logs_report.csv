@@ -1,0 +1,59 @@
+IP Address,Log,Threat
+192.168.1.2,192.168.1.2 - GET /home,SQL Injection
+192.168.1.3,192.168.1.3 - GET /login,SQL Injection
+192.168.1.4,192.168.1.4 - failed login attempt for admin,Brute Force
+192.168.1.5,192.168.1.5 - GET /login ' OR 1=1,SQL Injection
+192.168.1.6,192.168.1.6 - <script>alert('XSS')</script>,XSS
+192.168.1.7,192.168.1.7 - GET ../../etc/passwd,SQL Injection
+192.168.1.8,192.168.1.8 - multiple POST requests flood detected,Brute Force
+192.168.1.9,192.168.1.9 - upload malware.exe,SQL Injection
+192.168.1.10,192.168.1.10 - suspicious cmd=whoami execution,SQL Injection
+192.168.1.11,192.168.1.11 - unauthorized access to /admin,Brute Force
+192.168.1.12,192.168.1.12 - brute force login detected,Brute Force
+192.168.1.13,192.168.1.13 - SQL error near SELECT * FROM users,SQL Injection
+192.168.1.14,192.168.1.14 - cross site scripting attempt,SQL Injection
+192.168.1.15,192.168.1.15 - DDoS traffic spike detected,SQL Injection
+192.168.1.16,192.168.1.16 - port scanning activity detected,SQL Injection
+192.168.1.17,192.168.1.17 - normal user login successful,Brute Force
+192.168.1.18,192.168.1.18 - GET /dashboard,SQL Injection
+192.168.1.19,192.168.1.19 - botnet command and control traffic,SQL Injection
+192.168.1.20,192.168.1.20 - shellcode injection detected,SQL Injection
+192.168.1.21,192.168.1.21 - excessive failed login attempts,Brute Force
+192.168.1.22,192.168.1.22 - directory traversal ../../windows/system32,SQL Injection
+192.168.1.23,192.168.1.23 - GET /profile,SQL Injection
+192.168.1.24,192.168.1.24 - brute force login attempt,Brute Force
+192.168.1.25,192.168.1.25 - SQL injection attempt using UNION SELECT,SQL Injection
+192.168.1.26,192.168.1.26 - <img src=x onerror=alert(1)>,SQL Injection
+192.168.1.27,192.168.1.27 - malware file upload detected,SQL Injection
+192.168.1.28,192.168.1.28 - GET /admin/config,SQL Injection
+192.168.1.29,192.168.1.29 - repeated authentication failure,SQL Injection
+192.168.1.30,192.168.1.30 - GET /contact,Normal
+192.168.1.2,192.168.1.2 - GET /home,SQL Injection
+192.168.1.3,192.168.1.3 - GET /login,SQL Injection
+192.168.1.4,192.168.1.4 - failed login attempt for admin,Brute Force
+192.168.1.5,192.168.1.5 - GET /login ' OR 1=1,SQL Injection
+192.168.1.6,192.168.1.6 - <script>alert('XSS')</script>,XSS
+192.168.1.7,192.168.1.7 - GET ../../etc/passwd,SQL Injection
+192.168.1.8,192.168.1.8 - multiple POST requests flood detected,Brute Force
+192.168.1.9,192.168.1.9 - upload malware.exe,SQL Injection
+192.168.1.10,192.168.1.10 - suspicious cmd=whoami execution,SQL Injection
+192.168.1.11,192.168.1.11 - unauthorized access to /admin,Brute Force
+192.168.1.12,192.168.1.12 - brute force login detected,Brute Force
+192.168.1.13,192.168.1.13 - SQL error near SELECT * FROM users,SQL Injection
+192.168.1.14,192.168.1.14 - cross site scripting attempt,SQL Injection
+192.168.1.15,192.168.1.15 - DDoS traffic spike detected,SQL Injection
+192.168.1.16,192.168.1.16 - port scanning activity detected,SQL Injection
+192.168.1.17,192.168.1.17 - normal user login successful,Brute Force
+192.168.1.18,192.168.1.18 - GET /dashboard,SQL Injection
+192.168.1.19,192.168.1.19 - botnet command and control traffic,SQL Injection
+192.168.1.20,192.168.1.20 - shellcode injection detected,SQL Injection
+192.168.1.21,192.168.1.21 - excessive failed login attempts,Brute Force
+192.168.1.22,192.168.1.22 - directory traversal ../../windows/system32,SQL Injection
+192.168.1.23,192.168.1.23 - GET /profile,SQL Injection
+192.168.1.24,192.168.1.24 - brute force login attempt,Brute Force
+192.168.1.25,192.168.1.25 - SQL injection attempt using UNION SELECT,SQL Injection
+192.168.1.26,192.168.1.26 - <img src=x onerror=alert(1)>,SQL Injection
+192.168.1.27,192.168.1.27 - malware file upload detected,SQL Injection
+192.168.1.28,192.168.1.28 - GET /admin/config,SQL Injection
+192.168.1.29,192.168.1.29 - repeated authentication failure,SQL Injection
+192.168.1.30,192.168.1.30 - GET /contact,Normal

@@ -1,0 +1,67 @@
+IP Address,Log Message,Threat Type
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection
+192.168.1.10,192.168.1.10 User login successful,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+10.0.0.5,10.0.0.5 SQL Injection attempt detected,SQL Injection
+172.16.0.2,172.16.0.2 DDoS attack detected,SQL Injection
+192.168.1.15,192.168.1.15 Failed password attempt,SQL Injection
+192.168.1.10,192.168.1.10 Normal browsing activity,SQL Injection

@@ -1,0 +1,29 @@
+192.168.1.2 - GET /home
+192.168.1.3 - GET /login
+192.168.1.4 - failed login attempt for admin
+192.168.1.5 - GET /login ' OR 1=1
+192.168.1.6 - <script>alert('XSS')</script>
+192.168.1.7 - GET ../../etc/passwd
+192.168.1.8 - multiple POST requests flood detected
+192.168.1.9 - upload malware.exe
+192.168.1.10 - suspicious cmd=whoami execution
+192.168.1.11 - unauthorized access to /admin
+192.168.1.12 - brute force login detected
+192.168.1.13 - SQL error near SELECT * FROM users
+192.168.1.14 - cross site scripting attempt
+192.168.1.15 - DDoS traffic spike detected
+192.168.1.16 - port scanning activity detected
+192.168.1.17 - normal user login successful
+192.168.1.18 - GET /dashboard
+192.168.1.19 - botnet command and control traffic
+192.168.1.20 - shellcode injection detected
+192.168.1.21 - excessive failed login attempts
+192.168.1.22 - directory traversal ../../windows/system32
+192.168.1.23 - GET /profile
+192.168.1.24 - brute force login attempt
+192.168.1.25 - SQL injection attempt using UNION SELECT
+192.168.1.26 - <img src=x onerror=alert(1)>
+192.168.1.27 - malware file upload detected
+192.168.1.28 - GET /admin/config
+192.168.1.29 - repeated authentication failure
+192.168.1.30 - GET /contact

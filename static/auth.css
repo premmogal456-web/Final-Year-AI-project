@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+}
+
+/* Center the login box */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login container */
+.auth-container {
+    background: #111;
+    padding: 40px;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #00ffff;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #222;
+    color: white;
+}
+
+.auth-container input:focus {
+    box-shadow: 0 0 6px #00ffff;
+}
+
+/* Button */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #00ffff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: #00cccc;
+}
+
+.toggle-password {
+    cursor: pointer;
+    color: #00ffff;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.auth-container p {
+    color: white;
+}
+
+.auth-container a {
+    color: #00ffff;
+    text-decoration: none;
+}

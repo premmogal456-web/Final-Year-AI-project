@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings - AI Threat Detector</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f2027;
+            color: white;
+        }
+
+        .navbar {
+            background: #111;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            color: #00bfff;
+            margin: 0;
+        }
+
+        .navbar a {
+            color: #00bfff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #111;
+            min-height: 100vh;
+            padding-top: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #00bfff;
+            padding: 15px 25px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: #1f1f1f;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 20px rgba(0,191,255,0.2);
+        }
+
+        h3 {
+            color: #00bfff;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #00bfff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #009acd;
+        }
+
+        .danger {
+            background: #ff4d4d;
+            color: white;
+        }
+
+        .danger:hover {
+            background: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🛡 AI Threat Detector</h2>
+    <div>
+        <span>👤 {{ session['user'] }}</span>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="sidebar">
+        <a href="/">🏠 Dashboard</a>
+        <a href="/reports">📊 Reports</a>
+        <a href="/export">⬇ Download CSV</a>
+        <a href="/settings">⚙ Settings</a>
+    </div>
+
+    <div class="content">
+
+        <!-- Profile Info -->
+        <div class="card">
+            <h3>👤 Profile Information</h3>
+            <p><strong>Username:</strong> {{ session['user'] }}</p>
+            <p><strong>Account Type:</strong> Standard User</p>
+        </div>
+
+        <!-- Change Password -->
+        <div class="card">
+            <h3>🔐 Change Password</h3>
+            <form method="POST" action="/change_password">
+                <input type="password" name="old_password" placeholder="Old Password" required>
+                <input type="password" name="new_password" placeholder="New Password" required>
+                <button type="submit">Update Password</button>
+            </form>
+        </div>
+
+
+        <!-- Danger Zone -->
+        <div class="card">
+    <h3>⚠ Danger Zone</h3>
+
+    <form action="/delete_account" method="POST" onsubmit="return confirmDelete()">
+        <input type="password" name="password" placeholder="Enter password to confirm" required>
+        <button class="danger" type="submit">
+            🗑 Delete Account
+        </button>
+    </form>
+
+    <br>
+
+    <form action="/logout" method="GET">
+        <button class="danger" type="submit">
+            🚪 Logout
+        </button>
+    </form>
+</div>
+
+<script>
+function confirmDelete() {
+    return confirm("This action is permanent. Are you sure?");
+}
+</script>
+
+    </div>
+</div>
+
+<script>
+    function toggleTheme() {
+        alert("Theme toggle feature coming soon!");
+    }
+</script>
+
+</body>
+</html>

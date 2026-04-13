@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Login - AI Threat Detector</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-end; /* moves box to right */
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.login-box {
+    background: transparent;
+    padding: 40px;
+    width: 320px;
+    text-align: center;
+    margin-right: 120px; /* space from right side */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #00bfff;
+    font-size: 28px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+}
+
+.error-text {
+    color: #ff4d4d;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.success-text {
+    color: #28a745;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #00bfff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #009acd;
+}
+
+a {
+    color: #00bfff;
+    text-decoration: none;
+    font-size: 14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>🛡 AI Threat Detector</h2>
+
+<form method="POST">
+
+<input type="text" name="username" placeholder="Username" required>
+
+<input type="password" name="password" placeholder="Password" required>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+
+{% if category == "error" %}
+<div class="error-text">{{ message }}</div>
+{% elif category == "success" %}
+<div class="success-text">{{ message }}</div>
+{% endif %}
+
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<button type="submit">Login</button>
+
+</form>
+
+<br>
+
+<a href="/register">Don't have an account? Register</a>
+
+</div>
+
+</body>
+</html>
